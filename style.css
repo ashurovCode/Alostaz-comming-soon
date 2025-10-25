@@ -7,9 +7,11 @@ body,
 html {
   height: 100%;
   font-family: 'Poppins', sans-serif;
-  background: #121214;
-  background-image: url(assets/bg.png);
+  background: #121214 url(assets/bg.png);
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* header top, footer bottom */
 }
 
 .logo {
@@ -18,34 +20,28 @@ html {
 }
 
 header {
-  position: absolute;
-  top: 50px; /* distance from top */
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding-top: 50px; /* distance from top */
 }
 header h1 {
   font-size: 50px;
   max-width: 790px;
-  font-weight: 600;
-  text-transform: uppercase;
   font-weight: 800;
-  text-align: center;
+  text-transform: uppercase;
   padding-top: 70px;
 }
 
 .container {
-  min-height: 100vh; /* full viewport height */
+  flex: 1; /* takes all available vertical space */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 0 20px;
-  padding-top: 200px; /* pushes container below header */
   box-sizing: border-box;
 }
 .role-selection {
@@ -148,22 +144,18 @@ button:hover {
 }
 
 footer {
-  position: absolute;
-  bottom: 40px;
-  left: 0;
   width: 100%;
   text-align: center;
   font-size: 14px;
   color: #fff;
+  padding: 20px 0;
 }
-
 footer h2 {
   font-weight: 900;
   font-size: 40px;
   margin-bottom: 23px;
   text-shadow: 4px 8px 10px rgba(0, 0, 0, 0.4);
 }
-
 footer p {
   font-weight: 500;
   font-size: 16px;
@@ -201,10 +193,13 @@ footer p {
     width: 399px;
   }
   .container {
-    padding-top: 150px;
+    padding-top: 50px;
   }
   .role-selection {
     max-width: 250px;
+  }
+  footer h2 {
+    font-size: 30px;
   }
 }
 @media (max-width: 400px) {
@@ -223,7 +218,7 @@ footer p {
     width: 399px;
   }
   .container {
-    padding-top: 120px;
+    padding-top: 30px;
   }
 }
 @media (max-width: 350px) {
@@ -238,7 +233,13 @@ footer p {
     font-size: 30px;
     width: 399px;
   }
+  footer h2 {
+    font-size: 30px;
+  }
   .role-selection {
     max-width: 150px;
+  }
+  .container {
+    padding-top: 20px;
   }
 }
