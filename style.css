@@ -11,7 +11,7 @@ html {
   color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* header top, footer bottom */
+  justify-content: space-between;
 }
 
 .logo {
@@ -24,7 +24,7 @@ header {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding-top: 50px; /* distance from top */
+  padding-top: 50px;
 }
 header h1 {
   font-size: 50px;
@@ -35,7 +35,7 @@ header h1 {
 }
 
 .container {
-  flex: 1; /* takes all available vertical space */
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,9 +63,9 @@ header h1 {
 }
 
 .role-selection .active {
-  background-color: #014871; /* Active background */
-  color: #fff; /* Active text color */
-  opacity: 1; /* Fully visible */
+  background-color: #014871;
+  color: #fff;
+  opacity: 1;
 }
 
 .role-selection div:not(.active) {
