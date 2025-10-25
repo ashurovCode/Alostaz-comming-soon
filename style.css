@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: #121214;
+  background-image: url(assets/bg.png);
+  color: #fff;
+}
+
+.logo {
+  width: 351px;
+  height: 71px;
+}
+
+header {
+  position: absolute;
+  top: 50px; /* distance from top */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+header h1 {
+  font-size: 50px;
+  max-width: 790px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-align: center;
+  padding-top: 70px;
+}
+
+.container {
+  min-height: 100vh; /* full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  padding-top: 200px; /* pushes container below header */
+  box-sizing: border-box;
+}
+.role-selection {
+  display: flex;
+  max-width: 316px;
+  margin: 0 auto;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding: 3px 3px;
+  border-radius: 18px;
+  border: 2px solid transparent;
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  box-shadow: 0 2px 8px rgba(18, 18, 20, 0.2);
+}
+
+.role-selection div {
+  transition: all 0.3s ease;
+}
+
+.role-selection .active {
+  background-color: #014871; /* Active background */
+  color: #fff; /* Active text color */
+  opacity: 1; /* Fully visible */
+}
+
+.role-selection div:not(.active) {
+  background-color: transparent;
+  color: #002840;
+  opacity: 0.7;
+}
+
+.role1 {
+  background-color: #014871;
+  padding: 17px 38px;
+  font-size: 16px;
+  font-weight: regular;
+  border-radius: 16px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.role2 {
+  background-color: transparent;
+  padding: 17px 38px;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: regular;
+  border: none;
+  color: #002840;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  gap: 24px;
+}
+input {
+  min-width: 550px;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+  border: 2px solid transparent;
+  border-color: linear-gradient(90deg, #ffffff 40%, #014871 40%);
+  box-shadow: 0 2px 8px rgba(18, 18, 20, 0.25);
+  background: transparent;
+  color: #fff;
+}
+
+input::placeholder {
+  color: #bababa;
+}
+button {
+  min-width: 241px;
+  width: 100%;
+  padding: 17px 87px;
+  border-radius: 15px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #014871;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(18, 18, 20, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #01314a;
+}
+
+footer {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+}
+
+footer h2 {
+  font-weight: 900;
+  font-size: 40px;
+  margin-bottom: 23px;
+  text-shadow: 4px 8px 10px rgba(0, 0, 0, 0.4);
+}
+
+footer p {
+  font-weight: 500;
+  font-size: 16px;
+  opacity: 0.8;
+  margin-bottom: 16px;
+}
+
+.social-media {
+  max-width: 225px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.social-media img {
+  cursor: pointer;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  input {
+    min-width: 300px;
+  }
+  .role-selection {
+    min-width: 332px;
+  }
+  .logo {
+    width: 249px;
+    height: 50px;
+  }
+  header h1 {
+    font-size: 30px;
+    width: 399px;
+  }
+  .container {
+    padding-top: 150px;
+  }
+  .role-selection {
+    max-width: 250px;
+  }
+}
+@media (max-width: 400px) {
+  input {
+    min-width: 200px;
+  }
+  .role-selection {
+    max-width: 200px;
+  }
+  .logo {
+    width: 249px;
+    height: 50px;
+  }
+  header h1 {
+    font-size: 30px;
+    width: 399px;
+  }
+  .container {
+    padding-top: 120px;
+  }
+}
+@media (max-width: 350px) {
+  input {
+    min-width: 150px;
+  }
+  .logo {
+    width: 249px;
+    height: 50px;
+  }
+  header h1 {
+    font-size: 30px;
+    width: 399px;
+  }
+  .role-selection {
+    max-width: 150px;
+  }
+}
